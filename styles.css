@@ -1,0 +1,116 @@
+/* ESTRUTURA CSS
+  Seletor {
+      propriedade: valor;
+  }
+    Como vimos no slide 14 [cite: 147-151]
+*/
+
+/* Seletor de ELEMENTO
+  Aplica a todos os elementos <body>, <h1>, <p>, etc.
+  [cite_start]Conceito visto no slide 15 [cite: 178, 190-192]
+*/
+body {
+    /* Propriedades como 'background-color', 'height', 'width' foram vistas no slide 14 [cite: 153-155] */
+    background-color: #121212; /* Cor de fundo escura (Dark Mode) */
+    color: #E0E0E0;            /* Cor do texto principal (cinza claro) */
+    font-family: Arial, sans-serif; /* Fonte básica e limpa */
+    margin: 0;                 /* Remove margens padrão do navegador */
+    padding: 20px;
+}
+
+h1,
+h2 {
+    /* Cor de destaque "azul tech" para títulos */
+    color: #00A9FF;
+}
+
+h2 {
+    /* Adiciona uma linha inferior aos subtítulos dos cards */
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6; /* Melhora a legibilidade dos parágrafos */
+    text-align: justify;
+}
+
+
+/* Seletor de ID
+  Aplica estilização SOMENTE ao elemento com o id="header", etc.
+  [cite_start]Conceito visto no slide 15 [cite: 186, 194]
+*/
+#header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#content-wrapper {
+    /* Limita a largura do conteúdo e centraliza na página */
+    max-width: 800px;
+    margin: 0 auto; /* Truque de centralização (margem 0 em cima/baixo, auto nas laterais) */
+}
+
+#profile-pic {
+    /* As propriedades 'width' e 'height' foram vistas no slide 14 [cite: 170, 172] */
+    width: 150px;
+    height: 150px;
+
+    /* Estilos extras para o design "tech" */
+    border-radius: 50%;      /* Deixa a imagem redonda */
+    border: 3px solid #00A9FF; /* Borda com a cor de destaque */
+    display: block;          /* Permite centralização com margem */
+    margin: 20px auto;       /* Centraliza a imagem */
+}
+
+
+/* Seletor de CLASSE
+  Aplica a estilização a TODOS os elementos que tiverem class="card".
+  [cite_start]Conceito visto no slide 15 [cite: 179, 193]
+*/
+.card {
+    /* Esta é a base do nosso layout, como no exemplo <div class="card"> do slide 13 [cite: 135] */
+    background-color: #1E1E1E; /* Cor de fundo do card, inspirada no Lab. de Inovação [cite: 73] */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;      /* Bordas arredondadas para um visual moderno */
+    
+    /* Sombra suave para dar profundidade (efeito "flutuante") */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+}
+
+
+/* =================================== */
+/* CSS da Galeria de Mídia (NOVO)      */
+/* =================================== */
+
+/* Seletor de Classe para o container da galeria */
+.media-gallery {
+    /* Isso faz as imagens ficarem centralizadas */
+    text-align: center;
+    margin-top: 20px; /* Um espaço acima da galeria */
+}
+
+/* Seletor de Classe para cada imagem/thumbnail */
+.media-thumbnail {
+    /* Usamos 'width' e 'height' como no slide 14 [cite: 170, 172] */
+    width: 130px; 
+    height: 190px; /* altura fixa para os posters ficarem uniformes */
+    object-fit: cover; /* Isso garante que a imagem preencha o espaço sem distorcer */
+    
+    margin: 8px; /* Espaçamento entre as imagens */
+    
+    /* Estilo "tech" similar à sua foto de perfil */
+    border: 2px solid #00A9FF;
+    border-radius: 4px;
+    
+    /* Efeito sutil de transição (bônus!) */
+    transition: transform 0.2s;
+}
+
+/* Um pequeno efeito de "hover" (passar o mouse por cima) */
+/* Isso dá mais feedback de interatividade */
+.media-thumbnail:hover {
+    transform: scale(1.05); /* Aumenta levemente a imagem */
+    box-shadow: 0 0 15px #00A9FF; /* Adiciona um "brilho" azul */
+}
